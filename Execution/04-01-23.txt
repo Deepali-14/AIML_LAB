@@ -1,0 +1,158 @@
+7+2
+9
+7-2
+7-2
+5
+7*2
+7*2
+14
+7/2
+7/2
+3.5
+6/2
+6/2
+3.0
+7%2
+7%2
+1
+7//2
+7//2
+3
+ 
+"Deepali"+" Singh"
+'Deepali Singh'
+import numpy as np
+a=np.array([0,1,2,3])
+a
+array([0, 1, 2, 3])
+e
+L=range(1000)
+%timeit[i**2 for i in L]
+a=np.arrange(1000)
+UsageError: Line magic function `%timeit[i**2` not found.
+a.ndim
+a.ndim
+1
+a.shape
+a.shape
+(4,)
+a
+len(a)
+4
+b
+b=np.array([[0,1,2],[3,4,5]])
+b
+array([[0, 1, 2],
+       [3, 4, 5]])
+b.shape
+b.shape
+(2, 3)
+b.ndim
+b.ndim
+2
+b
+len(b)
+2
+c=np.array([[[[1],[2]],[[3],[4]], [[3],[4]]],[[[1],[2]],[[3],[4]], [[3],[4]]]])
+c
+​
+array([[[[1],
+         [2]],
+
+        [[3],
+         [4]],
+
+        [[3],
+         [4]]],
+
+
+       [[[1],
+         [2]],
+
+        [[3],
+         [4]],
+
+        [[3],
+         [4]]]])
+c.shape
+(2, 3, 2, 1)
+c.ndim
+c.ndim
+3
+len(c)
+3
+0
+a=np.arange(10)
+a
+a
+array([0, 1, 2, 3, 4, 5, 6, 7, 8, 9])
+a
+b=np.arange(1,9,2)
+b
+array([1, 3, 5, 7])
+c
+c=np.linspace(0,1,6)
+c
+array([0. , 0.2, 0.4, 0.6, 0.8, 1. ])
+d
+d=np.linspace(0,1,5,endpoint=False)
+d
+array([0. , 0.2, 0.4, 0.6, 0.8])
+e=np.random.rand(4)
+e
+array([0.3128037 , 0.2231975 , 0.60993767, 0.18781288])
+f=np.random.randn(4)
+f
+array([-0.51850397, -1.84129022,  1.00318165, -0.73610819])
+type(f)
+numpy.ndarray
+a=1
+type(a)
+int
+b
+type(b)
+numpy.ndarray
+f.dtype
+f.dtype
+dtype('float64')
+c
+c=np.array([1,2,3], dtype=float)
+c
+array([1., 2., 3.])
+c.dtype
+c.dtype
+dtype('float64')
+d
+d=np.array([1,2,3])
+d
+array([1, 2, 3])
+d.dtype
+d.dtype
+dtype('int32')
+a=np.ones((3,3))
+a
+array([[1., 1., 1.],
+       [1., 1., 1.],
+       [1., 1., 1.]])
+a.dtype
+a.dtype
+dtype('float64')
+d
+d=np.array([1+2j, 3+4j, 5+6*1j])
+d
+array([1.+2.j, 3.+4.j, 5.+6.j])
+ype
+d.dtype
+dtype('complex128')
+e=np.array([True,False,False,True])
+e
+array([ True, False, False,  True])
+e.dtype
+e.dtype
+dtype('bool')
+f=np.array(['Bob', 'Hello', 'Bolo'])
+f
+array(['Bob', 'Hello', 'Bolo'], dtype='<U5')
+f.dtype
+f.dtype
+dtype('<U5')

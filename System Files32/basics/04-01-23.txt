@@ -1,0 +1,147 @@
+
+Code
+7+2
+7+2
+9
+7-2
+7-2
+5
+7*2
+7*2
+14
+7/2
+7/2
+3.5
+6/2
+3.0
+7%2
+7%2
+1
+7//2
+7//2
+3
+"
+"ayushi"+"rajput"
+'ayushirajput'
+a
+import numpy as np
+a=np.array([0,1,2,3])
+a
+array([0, 1, 2, 3])
+%
+L=range(1000)
+%timeit[i**2 for i in L]
+a=np.arange(1000)
+UsageError: Line magic function `%timeit[i**2` not found.
+a.ndim
+a.ndim
+1
+a.shape
+a.shape
+(4,)
+a
+len(a)
+4
+b=np.array([[0,1,2],[3,4,5]])
+b
+b=np.array([[0,1,2],[3,4,5]])
+b
+array([[0, 1, 2],
+       [3, 4, 5]])
+e
+b.shape
+(2, 3)
+b
+len(b)
+2
+b.ndim
+b.ndim
+2
+c=np.array([[[1],[2]],[[3],[4]]])
+c
+array([[[1],
+        [2]],
+
+       [[3],
+        [4]]])
+c.shape
+c.shape
+(2, 2, 1)
+c
+len(c)
+2
+c.ndim
+c.ndim
+3
+a
+a=np.arange(10)
+a
+array([0, 1, 2, 3, 4, 5, 6, 7, 8, 9])
+b=np.arange(1,9,2)
+b
+array([1, 3, 5, 7])
+c
+c=np.linspace(0,1,6)
+c
+array([0. , 0.2, 0.4, 0.6, 0.8, 1. ])
+d
+d=np.linspace(0,1,5,endpoint=False)
+d
+array([0. , 0.2, 0.4, 0.6, 0.8])
+e=np.random.rand(4)
+e
+e=np.random.rand(4)
+e
+array([4.78175854, 4.10696636, 1.66677812, 3.81350429])
+f=np.random.randn(4)
+f
+array([-0.7432254 ,  0.12198018,  0.74938793,  1.03392489])
+type(a)
+numpy.ndarray
+x=9.787
+y=87
+type(x)
+float
+type(y)
+int
+m=np.array([[0,1,2],[3,4,5]])
+m.dtype
+dtype('int32')
+b
+type(b)
+numpy.ndarray
+c
+c=np.array([1,2,3],dtype=float)
+c
+array([1., 2., 3.])
+c.dtype
+c.dtype
+dtype('float64')
+l=np.ones((3,3))
+l
+array([[1., 1., 1.],
+       [1., 1., 1.],
+       [1., 1., 1.]])
+l.dtype
+dtype('float64')
+d
+d=np.array([1+2j,3+4j,5+6*1j])
+d
+array([1.+2.j, 3.+4.j, 5.+6.j])
+d.dtype
+d.dtype
+dtype('complex128')
+rue
+e=np.array([True,False,False,True])
+e
+array([ True, False, False,  True])
+e.dtype
+e.dtype
+dtype('bool')
+BOLO
+f=np.array(['BOB','HELLO','BOLO'])
+f
+array(['BOB', 'HELLO', 'BOLO'], dtype='<U5')
+pe
+f.dtype
+dtype('<U5')

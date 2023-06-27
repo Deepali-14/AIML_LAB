@@ -1,0 +1,131 @@
+#####Write a program in python to read the dataset “Grade_Set_1_Classification.csv”. 
+#####Perform Logistic regression on the dataset and perform the following activities:
+#####(a)	Plot the regression curve,
+#####(b)	Find the Accuracy of the model, 
+#####(c)	Generate confusion Matrix,
+#####(d)	Generate the ROC and AUC.
+
+import pandas as pd
+import numpy as np
+import matplotlib.pyplot as plt
+import scipy.stats as stats
+import statsmodels.api as sm
+
+# Load data
+df = pd.read_csv('F:/Practical__PYTHON/datasets/code__data__6steps/Chapter_3_Code/Code\Data/Grade_Set_1_Classification.csv')
+print (df)
+
+
+
+from sklearn.linear_model import LogisticRegression
+
+# manually add intercept
+df['intercept'] = 1
+independent_variables = ['Hours_Studied', 'intercept']
+
+x = df[independent_variables]       # independent variable
+y = df['Result']                      # dependent variable 
+
+# instantiate a logistic regression model, and fit with X and y
+model = LogisticRegression(solver='lbfgs')
+model = model.fit(x, y)
+
+'''The “lbfgs” is an optimization algorithm that approximates the Broyden–Fletcher–Goldfarb–Shanno 
+algorithm8, which belongs to quasi-Newton methods. The “lbfgs” solver is recommended for use for 
+small data-sets but for larger datasets its performance suffers.
+The “lbfgs” solver is used by default for its robustness. For large datasets the “saga” solver is 
+usually faster. For large dataset, you may also consider using SGDClassifier with ‘log’ loss, which 
+might be even faster but requires more tuning.'''
+# check the accuracy on the training set
+model.score(x, y)
+
+# predict_proba will return array containing probability of y = 0 and y = 1
+print ('Predicted probability:', model.predict_proba(x)[:,1])
+
+# predict will give convert the probability(y=1) values > .5 to 1 else 0  
+print ('Predicted Class:',model.predict(x))
+
+# plotting fitted line
+plt.scatter(df.Hours_Studied, y,  color='black')
+plt.yticks([0.0, 0.5, 1.0])
+plt.plot(df.Hours_Studied, model.predict_proba(x)[:,1], color='blue', linewidth=3)
+plt.title('Hours Studied vs Result - Fitted Line')
+plt.ylabel('Result')
+plt.xlabel('Hours_Studied')
+plt.show()
+
+
+
+from sklearn import metrics
+
+# generate evaluation metrics
+print ("Accuracy :", metrics.accuracy_score(y, model.predict(x)))
+print ("AUC :", metrics.roc_auc_score(y, model.predict_proba(x)[:,1]))
+
+print ("Confusion matrix :",metrics.confusion_matrix(y, model.predict(x)))
+print ("classification report :", metrics.classification_report(y, model.predict(x)))
+
+
+
+
+# Determine the false positive and true positive rates
+fpr, tpr, _ = metrics.roc_curve(y, model.predict_proba(x)[:,1])
+ 
+# Calculate the AUC
+roc_auc = metrics.auc(fpr, tpr)
+print ('ROC AUC: %0.2f' % roc_auc)
+ 
+# Plot of a ROC curve for a specific class
+plt.figure()
+plt.plot(fpr, tpr, label='ROC curve (area = %0.2f)' % roc_auc)
+plt.plot([0, 1], [0, 1], 'k--')
+plt.xlim([0.0, 1.0])
+plt.ylim([0.0, 1.05])
+plt.xlabel('False Positive Rate')
+plt.ylabel('True Positive Rate')
+plt.title('ROC Curve')
+plt.legend(loc="lower right")
+plt.show()
+
+
+
+# instantiate a logistic regression model with default c value, and fit with X and y
+model = LogisticRegression(solver='lbfgs')
+model = model.fit(x, y)
+
+# check the accuracy on the training set
+print ("C = 1 (default), Accuracy :", metrics.accuracy_score(y, model.predict(x)))
+
+# instantiate a logistic regression model with c = 10, and fit with X and y
+model1 = LogisticRegression(solver='lbfgs',C=10)
+model1 = model1.fit(x, y)
+
+# check the accuracy on the training set
+print ("C = 10, Accuracy :", metrics.accuracy_score(y, model1.predict(x)))
+
+# instantiate a logistic regression model with c = 100, and fit with X and y
+model2 = LogisticRegression(solver='lbfgs',C=100)
+model2 = model2.fit(x, y)
+
+# check the accuracy on the training set
+print ("C = 100, Accuracy :", metrics.accuracy_score(y, model2.predict(x)))
+
+# instantiate a logistic regression model with c = 1000, and fit with X and y
+model3 = LogisticRegression(solver='lbfgs',C=1000)
+model3 = model3.fit(x, y)
+
+# check the accuracy on the training set
+print ("C = 1000, Accuracy :", metrics.accuracy_score(y, model3.predict(x)))
+
+# plotting fitted line
+plt.scatter(df.Hours_Studied, y,  color='black', label='Result')
+plt.yticks([0.0, 0.5, 1.0])
+plt.plot(df.Hours_Studied, model.predict_proba(x)[:,1], color='gray', linewidth=2, label='C=1.0')
+plt.plot(df.Hours_Studied, model1.predict_proba(x)[:,1], color='blue', linewidth=2,label='C=10')
+plt.plot(df.Hours_Studied, model2.predict_proba(x)[:,1], color='green', linewidth=2,label='C=100')
+plt.plot(df.Hours_Studied, model3.predict_proba(x)[:,1], color='red', linewidth=2,label='C=1000')
+plt.legend(loc='lower right') # legend location
+plt.title('Hours Studied vs Result')
+plt.ylabel('Result')
+plt.xlabel('Hours_Studied')
+plt.show()

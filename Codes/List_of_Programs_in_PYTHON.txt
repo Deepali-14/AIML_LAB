@@ -1,0 +1,45 @@
+1.	WAP in Python to Add Two Numbers.
+2.	WAP in Python to Find the Square Root of  a Number.
+3.	WAP in Python to Calculate the Area of a Triangle.
+4.	WAP in Python to Solve Quadratic Equation.
+5.	WAP in Python to Swap Two Variables.
+6.	WAP in Python to Generate a Random Number.
+7.	WAP in Python to Convert Kilometers to Miles.
+8.	WAP in Python to Convert Celsius To Fahrenheit and vice versa.
+9.	WAP in Python to Check if a Number is Positive, Negative or 0.
+10.	WAP in Python to Check if a Number is Odd or Even.
+11.	WAP in Python to Check Leap Year.
+12.	WAP in Python to Find the Largest Among Three Numbers.
+13.	WAP in Python to Check Prime Number.
+14.	WAP in Python to Print all Prime Numbers in an Interval.
+15.	WAP in Python to Find the Factorial of a Number.
+16.	WAP in Python to Display the multiplication Table.
+17.	WAP in Python to Print the Fibonacci sequence.
+18.	WAP in Python to Check Armstrong Number
+19.	WAP in Python to Find Armstrong Number in an Interval.
+20.	WAP in Python to Find the Sum of Natural Numbers.
+21.	WAP in Python to Display Powers of 2 Using Anonymous Function.
+22.	WAP in Python to Find Numbers Divisible by Another Number.
+23.	WAP in Python to Convert Decimal to Binary, Octal and Hexadecimal.
+24.	WAP in Python to Find ASCII Value of Character.
+25.	WAP in Python to Find HCF or GCD of three Numbers.
+26.	WAP in Python to Find LCM  of three Numbers.
+27.	WAP in Python to Find the Factors of a Number.
+28.	WAP in Python to Make a Simple Calculator.
+29.	WAP in Python to Shuffle Deck of Cards.
+30.	WAP in Python to Display Calendar.
+31.	WAP in Python to Display Fibonacci Sequence Using Recursion.
+32.	WAP in Python to Find Sum of Natural Numbers Using Recursion.
+33.	WAP in Python to Find Factorial of Number Using Recursion.
+34.	WAP in Python to Convert Decimal to Binary Using Recursion.
+35.	WAP in Python to Add Two Matrices.
+36.	WAP in Python to Transpose a Matrix.
+37.	WAP in Python to Multiply Two Matrices.
+38.	WAP in Python to Check Whether a String is Palindrome or Not.
+39.	WAP in Python to Remove Punctuations From a String.
+40.	WAP in Python to Sort Words in Alphabetic Order.
+41.	WAP in Python to Illustrate Different Set Operations.
+42.	WAP in Python to Count the Number of Each Vowel.
+43.	WAP in Python to Merge Mails.
+44.	WAP in Python to Find the Size (Resolution) of a Image.
+45.	WAP in Python to Find Hash of File.

@@ -1,0 +1,49 @@
+7+5
+'7' + '5'
+'7' + 5
+TypeError                                 Traceback (most recent call last)
+~\AppData\Local\Temp\ipykernel_10392\2177343557.py in <module>
+----> 1 '7'+5
+
+TypeError: can only concatenate str (not "int") to str
+
+7*5
+7*5
+35
+7**5
+7**5
+16807
+7/5
+7/5
+1.4
+7//5
+7//5
+1
+7%5
+7%5
+2
+username=input("Enter Username : ")
+print("Username is : "+username)
+Enter Username : Deepali
+Username is : Deepali
+rt math
+import math
+90
+print("Sin(90):",math.sin(90))
+Sin(90): 0.8939966636005579
+//
+a,b,c=10,5,2
+print("Sum=",a+b)
+print("Difference=",a-b)
+print("Product=",a*b)
+print("Quotient=",a/b)
+print("Remainder=",a%b)
+print("Exponent=",a**b)
+print("Floor Division=",a//b)
+Sum= 15
+Difference= 5
+Product= 50
+Quotient= 2.0
+Remainder= 0
+Exponent= 100000
+Floor Division= 2
